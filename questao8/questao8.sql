@@ -1,0 +1,1 @@
+DELETE FROM tbl_Clientes WHERE NOME LIKE '%santos%'

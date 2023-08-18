@@ -1,0 +1,16 @@
+-- criando tabela de cliente
+
+CREATE TABLE tbl_Clientes (
+	CPF CHAR(11) PRIMARY KEY,
+	NOME VARCHAR(50) NOT NULL,
+	IDADE SMALLINT NOT NULL
+)
+
+-- criando tabela de telefone
+
+CREATE TABLE tbl_Telefones (
+	CPF_CLIENTE char(11) NOT NULL PRIMARY KEY,
+	CONSTRAINT fk_CPF_CLIENTE FOREIGN KEY (CPF_CLIENTE) REFERENCES tbl_Clientes (CPF),
+	DDD char(2) NOT NULL,
+	TELEFONE varchar(9) NOT NULL
+)
